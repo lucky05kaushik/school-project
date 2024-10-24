@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phished Data</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8e1; /* Light yellowish-white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 500px;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #e87c30; /* Darker orange color for the header */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333; /* Dark text for better readability */
+        }
+
+        span {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Phished Data</h1>
+    <p><strong>Name:</strong> <span id="displayName"></span></p>
+    <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+    <p><strong>Password:</strong> <span id="displayPassword"></span></p>
+    <p><strong>Phone Number:</strong> <span id="displayPhone"></span></p>
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('displayName').textContent = urlParams.get('name');
+    document.getElementById('displayEmail').textContent = urlParams.get('email');
+    document.getElementById('displayPassword').textContent = urlParams.get('password');
+    document.getElementById('displayPhone').textContent = urlParams.get('phone');
+</script>
+
+</body>
+</html>

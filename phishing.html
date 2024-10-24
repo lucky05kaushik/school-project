@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff8e1; /* Light yellowish-white */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 400px;
+            padding: 40px;
+            background-color: #fff; /* White background for the form */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff9f43; /* Orange color for the header */
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #ff9f43; /* Button matches the header */
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #e87c30; /* Darker orange on hover */
+        }
+
+        .show-password {
+            display: flex;
+            align-items: center;
+        }
+
+        .show-password input {
+            width: auto;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Get Your Free Ebook</h1>
+    <form action="phished_data.html" method="GET">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <div class="show-password">
+            <input type="checkbox" id="showPassword"> Show Password
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Download Ebook">
+        </div>
+    </form>
+</div>
+
+<script>
+    const showPasswordCheckbox = document.getElementById('showPassword');
+    const passwordField = document.getElementById('password');
+
+    showPasswordCheckbox.addEventListener('change', function () {
+        passwordField.type = this.checked ? 'text' : 'password';
+    });
+</script>
+
+</body>
+</html>
